@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      form.from-horizontal(method='post',action="/admin/movie/new")
+        input(type="hidden",name="movie[_id]",value="#{movie._id}")
+        .form-group
+          label.col-sm-3.col-lg-3.control-label(for="inputTitle") 电影名字
+          .col-sm-9.col-lg-9
+            input#inputTitle.form-control(type="text",name="movie[title]")
+        .form-group
+          label.col-sm-3.control-label(for="inputLange") 语种
+          .col-sm-9
+            input#inputLanguage.form-control(type="text",name="movie[language]")
+        .form-group
+          label.col-sm-3.control-label(for="inputPoster") 海报地址
+          .col-sm-9
+            input#inputPoster.form-control(type="text",name="movie[title]")
+        .form-group
+          label.col-sm-3.control-label(for="inputFlash") 片源地址
+          .col-sm-9
+            input#inputFlash.form-control(type="text",name="movie[Flash]")
